@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.license          = 'COMMERCIAL'
   s.homepage         = 'https://developer.paypal.com/docs/integration/paypal-here/ios-dev/overview/'
   s.author           = { 'PayPal' => 'paypal' }
-  s.source           = { :git => 'https://github.com/PayPal-Mobile/ios-here-sdk-dist.git', :tag => "v#{s.version}" }
+  s.source           = { :git => 'https://github.com/thuydao/paypal-here-sdk-ios-distribution', :branch => 'master' }
 
   s.ios.deployment_target = '6.0'
   s.requires_arc = true
@@ -23,20 +23,24 @@ Pod::Spec.new do |s|
   s.subspec 'Debug' do |sp|
     sp.vendored_frameworks = 'SDK/Debug/PayPalHereSDK.framework'
     sp.resource = 'SDK/Debug/PayPalHereSDK.bundle'
+    sp.public_header_files = 'SDK/Debug/PayPalHereSDK/**/*.h'
   end
 
   s.subspec 'Release' do |sp|
     sp.vendored_frameworks = 'SDK/Release/PayPalHereSDK.framework'
     sp.resource = 'SDK/Release/PayPalHereSDK.bundle'
+    sp.public_header_files = 'SDK/Debug/PayPalHereSDK/**/*.h'
   end
 
   s.subspec 'Debug-nohw' do |sp|
     sp.vendored_frameworks = 'SDK/nohw/Debug/PayPalHereSDK.framework'
     sp.resource = 'SDK/nohw/Debug/PayPalHereSDK.bundle'
+    sp.public_header_files = 'SDK/Debug/PayPalHereSDK/**/*.h'
   end
 
   s.subspec 'Release-nohw' do |sp|
     sp.vendored_frameworks = 'SDK/nohw/Release/PayPalHereSDK.framework'
     sp.resource = 'SDK/nohw/Release/PayPalHereSDK.bundle'
+    sp.public_header_files = 'SDK/Debug/PayPalHereSDK/**/*.h'
   end
 end
