@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author           = { 'PayPal' => 'paypal' }
   s.source           = { :git => 'https://github.com/thuydao/paypal-here-sdk-ios-distribution', :branch => 'master' }
 
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '8.0'
   s.requires_arc = true
 
   s.xcconfig = {
